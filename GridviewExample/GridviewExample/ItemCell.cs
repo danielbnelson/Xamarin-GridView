@@ -15,15 +15,10 @@ namespace GridviewExample
 			itemLabel.SetBinding (Label.TextProperty, "ItemName");
 
 			var layout = new StackLayout {
-				//				Padding = new Thickness(20, 0, 0, 0),
-				//				Orientation = StackOrientation.Horizontal,
-				//				HorizontalOptions = LayoutOptions.StartAndExpand,
-				//				BackgroundColor = Color.Transparent,
-				////				Children = {label, tick}
-				///
 
-				//BackgroundColor = Color.Transparent,
-				//WidthRequest = 500,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				VerticalOptions = LayoutOptions.FillAndExpand,
+			
 				Children = {
 					itemLabel,
 					hello

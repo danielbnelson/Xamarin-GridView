@@ -9,7 +9,10 @@ namespace GridviewExample
 		{	
 
 			GridView ItemGridView = new GridView {
-				ColumnSpacing = 40,
+				ColumnSpacing = 5,
+				RowSpacing = 5,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				VerticalOptions = LayoutOptions.FillAndExpand
 			};
 
 
