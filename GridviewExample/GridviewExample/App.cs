@@ -8,7 +8,11 @@ namespace GridviewExample
 		public static Page GetMainPage ()
 		{	
 
-			GridView ItemGridView = new GridView {
+
+	
+
+
+			GridView gridView = new GridView {
 				ColumnSpacing = 5,
 				RowSpacing = 5,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -16,19 +20,45 @@ namespace GridviewExample
 			};
 
 
-			ItemGridView.ItemTemplate = new DataTemplate (typeof (ItemCell));
+			gridView.ItemTemplate = new DataTemplate (typeof (ItemCell));
 
-			ItemGridView.ItemsSource = new ItemObject [] { 
-				new ItemObject {ItemName = "Buy pears`"}, 
-				new ItemObject {ItemName = "Buy oranges`"},
-				new ItemObject {ItemName = "Buy mangos`"}, 
-				new ItemObject {ItemName = "Buy apples`"},
-				new ItemObject {ItemName = "Buy bananas`"}
+			gridView.ItemsSource = new ItemObject [] { 
+							new ItemObject {ItemName = "Item AAA"}, 
+							new ItemObject {ItemName = "Item BBB"},
+							new ItemObject {ItemName = "Item CCC"}, 
+							new ItemObject {ItemName = "Item DDD"},
+							new ItemObject {ItemName = "Item EEE"},
+							new ItemObject {ItemName = "Item FFF"},
+							new ItemObject {ItemName = "Item GGG"},
+							new ItemObject {ItemName = "Item HHH"},
+							new ItemObject {ItemName = "Item IIIIIIIII"},
+							new ItemObject {ItemName = "Item AAA"}, 
+							new ItemObject {ItemName = "Item BBB"},
+							new ItemObject {ItemName = "Item CCC"}, 
+							new ItemObject {ItemName = "Item DDD"},
+							new ItemObject {ItemName = "Item EEE"},
+							new ItemObject {ItemName = "Item FFF"},
+							new ItemObject {ItemName = "Item GGG"},
+							new ItemObject {ItemName = "Item HHH"},
 						};
 
 
+			StackLayout stack = new StackLayout
+			{
+				Orientation = StackOrientation.Vertical,
+				VerticalOptions = LayoutOptions.FillAndExpand,
+				HorizontalOptions = LayoutOptions.FillAndExpand,
+				Padding = 40,
+				Spacing = 0,
+				Children = {gridView}
+			};
+
+			var scrollview = new ScrollView {
+				Content = stack
+			};
+
 			return new ContentPage { 
-				Content = ItemGridView
+				Content = scrollview
 
 			};
 

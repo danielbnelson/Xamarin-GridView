@@ -7,11 +7,6 @@ namespace GridviewExample
 	{
 		public ItemCell ()
 		{
-			//base.C
-//			Label itemLabel = new Label ();
-//			Label hello = new Label ();
-//			hello.Text = "hello???";
-
 
 
 			Label itemLabel = new Label()
@@ -22,13 +17,6 @@ namespace GridviewExample
 
 			itemLabel.SetBinding (Label.TextProperty, "ItemName");
 
-			Label hello = new Label ()
-			{
-				HorizontalOptions = LayoutOptions.FillAndExpand,
-				VerticalOptions = LayoutOptions.FillAndExpand
-			};
-
-			hello.Text = "hello?";
 
 			var layout = new StackLayout {
 
@@ -36,8 +24,7 @@ namespace GridviewExample
 				VerticalOptions = LayoutOptions.FillAndExpand,
 			
 				Children = {
-					itemLabel,
-					hello
+					itemLabel
 				}
 			};
 
