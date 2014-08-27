@@ -1,12 +1,14 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPhoneRetina.7.1" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="GridviewExample/EventArgs{T}.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="GridviewExample/GridView.cs">
     <Files>
-      <File FileName="GridviewExample/ItemCell.cs" Line="2" Column="2" />
-      <File FileName="GridviewExample/GridView.cs" Line="37" Column="37" />
-      <File FileName="GridviewExample/App.cs" Line="34" Column="34" />
-      <File FileName="GridviewExample/GridViewExample.cs" Line="4" Column="4" />
+      <File FileName="GridviewExample/ItemCell.cs" Line="4" Column="4" />
+      <File FileName="GridviewExample/GridView.cs" Line="5" Column="5" />
+      <File FileName="GridviewExample/App.cs" Line="1" Column="1" />
+      <File FileName="GridviewExample/GridViewExample.cs" Line="20" Column="20" />
       <File FileName="GridviewExample/EventArgs{T}.cs" Line="3" Column="3" />
+      <File FileName="iOS/GridCollectionView.cs" Line="39" Column="39" />
+      <File FileName="iOS/GridViewRenderer.cs" Line="25" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

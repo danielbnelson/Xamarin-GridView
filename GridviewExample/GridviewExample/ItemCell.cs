@@ -22,7 +22,8 @@ namespace GridviewExample
 
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.FillAndExpand,
-			
+				BackgroundColor = Color.Gray,
+
 				Children = {
 					itemLabel
 				}

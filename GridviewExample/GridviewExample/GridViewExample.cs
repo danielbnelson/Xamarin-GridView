@@ -11,8 +11,8 @@ namespace GridviewExample
 		public GridViewExample ()
 		{
 			GridView gridView = new GridView {
-				ColumnSpacing = 5,
-				RowSpacing = 5,
+				ColumnSpacing = 0,
+				RowSpacing = 0,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				VerticalOptions = LayoutOptions.FillAndExpand
 			};
@@ -29,8 +29,6 @@ namespace GridviewExample
 //				DisplayAlert ("selected value", e.Value.ToString (), "ok", null);
 //			};
 //
-
-
 
 			gridView.ItemTemplate = new DataTemplate (typeof (ItemCell));
 
@@ -60,16 +58,16 @@ namespace GridviewExample
 				Orientation = StackOrientation.Vertical,
 				VerticalOptions = LayoutOptions.FillAndExpand,
 				HorizontalOptions = LayoutOptions.FillAndExpand,
-				Padding = 40,
+				Padding = 0,
 				Spacing = 0,
 				Children = {gridView}
 			};
 
-			var scrollview = new ScrollView {
-				Content = stack
-			};
+//			var scrollview = new ScrollView {
+//				Content = stack
+//			};
 //
-			Content = scrollview;
+			Content = stack;
 
 		}
 	}
