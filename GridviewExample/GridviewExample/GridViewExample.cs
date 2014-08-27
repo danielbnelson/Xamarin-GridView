@@ -18,12 +18,17 @@ namespace GridviewExample
 			};
 
 
-			gridView.ItemSelected += (object sender, EventArgs<object> e) => {
-
-				//DisplayAlert ("", AppMessages.SIGNUP_MSG, AppMessages.CLOSE_ALERT);
-				DisplayAlert ("selected value", e.Value.ToString (), "ok", null);
+			gridView.ItemSelected += (sender, e) => {
+				ItemObject itemObject = (ItemObject)e.Value;
+				DisplayAlert ("selected value", itemObject.ItemName, "ok");
 			};
 
+//			gridView.ItemSelected += (object sender, EventArgs<object> e) => {
+//
+//				//DisplayAlert ("", AppMessages.SIGNUP_MSG, AppMessages.CLOSE_ALERT);
+//				DisplayAlert ("selected value", e.Value.ToString (), "ok", null);
+//			};
+//
 
 
 
@@ -63,7 +68,7 @@ namespace GridviewExample
 			var scrollview = new ScrollView {
 				Content = stack
 			};
-
+//
 			Content = scrollview;
 
 		}
