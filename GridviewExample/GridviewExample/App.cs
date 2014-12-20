@@ -13,7 +13,7 @@ namespace GridviewExample
 
 	
 
-			return new GridViewExample ();
+			return new GridExample ();
 
 
 		}
