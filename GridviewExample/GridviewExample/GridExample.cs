@@ -1,5 +1,6 @@
 ﻿using System;
 using Xamarin.Forms;
+using System.Linq;
 
 namespace GridviewExample
 {
@@ -14,10 +15,12 @@ namespace GridviewExample
 		
 			grid = new Grid ();
 			Button updateAll = new Button () {Text = "Update All"};
-			Button updateOne = new Button () {Text = "Update One"};
+			Button updateOne = new Button () {Text = "Update One via replace"};
+			Button updateOneDirectly = new Button () {Text = "Update One directly"};
 		
 			updateAll.Clicked += (sender, args) => {UpdateAll();};
 			updateOne.Clicked += (sender, args) => {UpdateOne();};
+			updateOneDirectly.Clicked += (sender, args) => {UpdateOneDirectly();};
 			//grid.ColumnSpacing = 10;
 
 
@@ -37,7 +40,7 @@ namespace GridviewExample
 				HorizontalOptions = LayoutOptions.FillAndExpand,
 				Padding = 10,
 				Spacing = 10,
-				Children = {updateOne, updateAll, scrollView}
+				Children = {updateOne, updateAll, updateOneDirectly, scrollView}
 			};
 
 			Content = stack;
@@ -83,8 +86,20 @@ namespace GridviewExample
 			//StackLayout stack = grid.Children.Cast<StackLayout> ().ElementAt (1);
 			grid.Children.RemoveAt (index);
 			grid.Children.Add (stack, 0,index);
+		}
 
+		private void UpdateOneDirectly(){
+			int index = 2; //example of just one we want to update
+			StackLayout stack =  grid.Children.Cast<StackLayout> ().ElementAt (index);
+			stack.BackgroundColor = Color.Green;
 
+			Label label = new Label (){ Text = "Added Label" };
+
+			stack.Children.Add (label);
+
+//			//StackLayout stack = grid.Children.Cast<StackLayout> ().ElementAt (1);
+//			grid.Children.RemoveAt (index);
+//			grid.Children.Add (stack, 0,index);
 		}
 
 		private void UpdateAll(){
